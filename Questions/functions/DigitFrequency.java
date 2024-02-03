@@ -4,13 +4,8 @@ package Questions.functions;
 import java.util.Scanner;
 
 public class DigitFrequency {
-    public static void main(String[] args){
-        System.out.println("hello world");
-        Scanner scn = new Scanner(System.in);
-        System.out.println("Enter the number");
-        int number = scn.nextInt();
-        System.out.println("Enter the digit");
-        int digit = scn.nextInt();
+
+    public static int frequency(int number, int digit){
         int freq = 0;
         while(number != 0){
             int lastDigit = number % 10;
@@ -19,6 +14,17 @@ public class DigitFrequency {
             }
             number = number / 10;
         }
+        return freq;
+    }
+    public static void main(String[] args){
+        System.out.println("hello world");
+        Scanner scn = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int number = scn.nextInt();
+        System.out.println("Enter the digit");
+        int digit = scn.nextInt();
+        //calling a frequency function
+        int freq = frequency(number, digit);
         System.out.println("The frequency is " + freq);
         scn.close();
 
